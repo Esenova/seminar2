@@ -1,3 +1,5 @@
+from myboxiterator import MyBoxIterator
+
 class MyBox(object):
 	def __init__(self, plov):
 		self.plov = plov
@@ -20,4 +22,4 @@ class MyBox(object):
 			return False
 
     	def __iter__(self, object):
-		return myboxiterator(self.plov)
+		return MyBoxIterator(self.plov)
