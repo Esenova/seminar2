@@ -19,7 +19,5 @@ class MyBox(object):
 		else:
 			return False
 
-	def iterator(self):
-		print(self.plov)
-		for each in self.plov:
-			print(each)
+    	def __iter__(self, object):
+		return myboxiterator(self.plov)
