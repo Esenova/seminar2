@@ -1,10 +1,14 @@
-class MyBoxIterator(object):
-	def __init__(self, arg):
-		super(MyBoxIterator, self).__init__()
-		self.arg = arg
-		
-	def __iter__(self):
-		return self
-	
-	def __next__(self):
-		return self.arg
+class MyBoxIterator:
+    def __init__(self, plov):
+        self.plov=plov
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.plov is None:
+            raise StopIteration
+        else:
+            data=self.plov.data
+            self.plov=self.oppo.next
+        return data  
